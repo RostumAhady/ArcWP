@@ -1,0 +1,524 @@
+/*
+Theme Name: ArcWP
+Theme URI: Your Theme's URI
+Description: Scaffolding Site
+Version: 1.0
+Author: Rostum Ahady
+Author URI: www.rostumahady.com
+*/
+
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+html {
+  height: 100%; }
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0; }
+
+p {
+  font-family: 'Roboto', sans-serif;
+  margin: 50px auto;
+  width: 50%;
+  font-size: 18px;
+  text-align: center; }
+
+a {
+  font-family: 'Roboto', sans-serif; }
+
+h2 {
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+  color: white; }
+
+h2:first-child {
+  padding-top: 100px; }
+
+* {
+  transition-property: all;
+  transition-duration: .6s;
+  transition-timing-function: ease; }
+
+/* Header Start */
+.navbar {
+  min-height: 80px;
+  background-color: #212831; }
+  .navbar a {
+    font-size: 20px;
+    color: white; }
+
+.navbar-brand {
+  padding: 0 0 0 8%; }
+
+.navbar-toggle {
+  margin-top: 13px;
+  padding: 9px 10px !important; }
+
+.nav-link {
+  padding-left: 1rem !important; }
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+
+/* Header End */
+/* Showcase Start */
+#showcase {
+  width: 100%;
+  height: 90vh;
+  margin: 0;
+  background: url("https://i.imgur.com/sgLnw0o.jpg") no-repeat 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 20% 60% 20%;
+  grid-template-areas: ". . ." ". cont1 ." ". arrowGrid ."; }
+
+.cont1 {
+  grid-area: cont1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  /* column | row */ }
+  .cont1 h3 {
+    color: white;
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    margin: 0; }
+
+#arrowGrid {
+  grid-area: arrowGrid; }
+
+.arrow {
+  text-align: center;
+  margin: 8% 0; }
+  .arrow a {
+    color: white;
+    text-decoration: none; }
+
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite; }
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); }
+  40% {
+    transform: translateY(-30px); }
+  60% {
+    transform: translateY(-15px); } }
+.whitecont {
+  min-height: 450px;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+  color: #393939;
+  font-weight: bold; }
+  .whitecont li {
+    text-align: center; }
+  .whitecont h2 {
+    color: #393939; }
+
+.blackcont {
+  min-height: 400px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  color: white;
+  background-color: #222932;
+  font-family: 'Roboto Condensed', sans-serif; }
+
+.textCont {
+  width: 100%; }
+  .textCont h1 {
+    font-weight: bold; }
+  .textCont p {
+    font-size: 18px;
+    margin-top: 35px;
+    line-height: 2em; }
+
+#aboutTitle p {
+  margin-bottom: 120px;
+  width: 60%; }
+
+.listBox {
+  width: 50%;
+  margin: 40px auto 120px auto; }
+
+.lists {
+  list-style-position: outside;
+  padding: 0;
+  list-style-type: disc; }
+  .lists li {
+    color: #56CCF2;
+    text-align: left;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px; }
+
+#accessList {
+  margin: 0 auto;
+  list-style: none; }
+  #accessList li {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    margin: 8px 0; }
+
+#processList a {
+  color: white;
+  font-size: 18px; }
+
+#HSList {
+  width: 50%;
+  display: inline-block; }
+  #HSList a {
+    color: black;
+    font-size: 18px; }
+
+.downloadBox {
+  float: right;
+  width: 50%; }
+  .downloadBox a {
+    margin: 10px auto;
+    display: block;
+    text-align: center; }
+
+#gridCard {
+  background: #F9F9F9;
+  font-family: 'Roboto Condensed', sans-serif;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: auto;
+  width: 75%;
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 10%;
+  grid-template-rows: 50px 2fr 1fr;
+  grid-template-areas: " . card_title card_title ." " . card1 card2 ." " . para para ."; }
+  #gridCard h3 {
+    text-align: center;
+    margin: 40px 0 0 0; }
+
+.card_title {
+  margin: 0;
+  grid-area: card_title; }
+  .card_title h1 {
+    text-align: center;
+    font-weight: bold; }
+
+.card1 {
+  grid-area: card1; }
+
+.card2 {
+  grid-area: card2; }
+
+.para {
+  grid-area: para; }
+  .para p {
+    margin-top: 50px; }
+
+#servicesHeaderGrid {
+  margin: 30px auto 30px auto;
+  display: grid;
+  width: 860px;
+  color: white;
+  text-align: center;
+  grid-template-columns: 20% 6.66% 20% 6.66% 20% 6.66% 20%;
+  grid-template-areas: "servicesOne dot1 servicesTwo dot2 servicesThree dot3 servicesFour"; }
+
+#servicesOne {
+  grid-area: servicesOne; }
+
+#servicesTwo {
+  grid-area: servicesTwo; }
+
+#servicesThree {
+  grid-area: servicesThree; }
+
+#servicesFour {
+  grid-area: servicesFour; }
+
+.servicesGridItem {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  /* column | row */ }
+  .servicesGridItem h3 {
+    font-weight: normal !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin: 0; }
+
+.portrait {
+  background: #56CBF1 url() no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%; }
+
+.dots {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  /* column | row */
+  margin: 0 auto; }
+
+#dot1 {
+  grid-area: dot1; }
+
+#dot2 {
+  grid-area: dot2; }
+
+#dot3 {
+  grid-area: dot3; }
+
+.vector {
+  display: block;
+  margin: 60px auto 40px auto; }
+
+#formBackground {
+  height: 900px;
+  background: url("https://i.imgur.com/sgLnw0o.jpg") no-repeat 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 10% 80% 10%;
+  grid-template-areas: ". . ." ". form ." ". . ."; }
+
+#formBox {
+  background-color: white;
+  border-radius: 15px;
+  width: 80%;
+  grid-area: form;
+  margin: 0 auto; }
+  #formBox h1 {
+    margin-top: 50px; }
+  #formBox p {
+    color: #D4D4D4;
+    margin-top: 1.5em;
+    margin-bottom: 4em;
+    font-size: 16px; }
+
+#form {
+  width: 90%;
+  margin: 0 auto;
+  font-family: 'Roboto Condensed', sans-serif; }
+  #form p {
+    width: 100%;
+    text-align: left; }
+
+#inputName, #inputPhone, #inputEmail {
+  display: block;
+  border: #828282 solid 2px;
+  border-radius: 3px;
+  font-size: 18px;
+  height: 70px;
+  width: 47%;
+  margin: 1em 0 1em 0;
+  line-height: normal;
+  padding: 8px 12px; }
+
+#inputPhone {
+  display: inline-block; }
+
+#inputEmail {
+  float: right; }
+
+#messageBox {
+  border: #828282 solid 2px;
+  border-radius: 3px;
+  margin: 1em 0 1em 0;
+  width: 100%;
+  height: 150px;
+  resize: none;
+  padding: 8px 12px;
+  font-size: 18px; }
+
+#quoteButton {
+  margin: 20px auto 20px auto;
+  width: 220px; }
+
+#bigB {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  /* column | row */ }
+  #bigB a:focus, #bigB a:hover {
+    color: black;
+    text-decoration: none;
+    background: #098ff7; }
+
+#whiteBtn {
+  border: 4px #56CCF2 solid;
+  background: transparent;
+  color: black; }
+
+.button {
+  position: relative;
+  margin: 0 auto;
+  width: 250px;
+  background: #56CCF2;
+  padding: 0.5em;
+  border: none;
+  color: white;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none; }
+
+#submit:hover {
+  background: #098ff7; }
+
+.footer {
+  height: 260px;
+  width: 100%;
+  background-color: #222932;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-areas: "f-Grid1 f-Grid2"; }
+
+#f-Grid1 {
+  grid-area: f-Grid1;
+  margin: 0 auto;
+  width: 40%; }
+  #f-Grid1 p {
+    color: white;
+    margin: 20px auto 0 auto;
+    display: block;
+    width: 100%; }
+  #f-Grid1 h2 {
+    text-align: left; }
+
+#f-Grid2 {
+  grid-area: f-Grid2;
+  color: white;
+  font-size: 32px;
+  padding-top: 120px;
+  margin-left: 0; }
+  #f-Grid2 .fab {
+    margin: auto 15px; }
+
+@media (min-width: 320px) and (max-width: 768px) {
+  #arrowGrid {
+    display: none; }
+
+  #showcase {
+    grid-template-areas: ". . ." "cont1 cont1 cont1" ". . ."; }
+
+  .cont1 h3 {
+    font-size: 50px; }
+
+  #aboutTitle p {
+    width: 90%; }
+
+  #gridHeader {
+    width: 90%;
+    grid-gap: 2em 0em;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "subheader_1" "subheader_2" "subheader_3" "subheader_4"; }
+
+  #formBox {
+    width: 100%; }
+
+  #formBackground {
+    grid-template-areas: "form form form" "form form form" "form form form";
+    background: none;
+    background-color: greenyellow; }
+
+  #gridCard {
+    width: 95%; }
+
+  p {
+    width: 90%; }
+
+  #servicesHeaderGrid {
+    height: 300px;
+    width: 90%;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 6.66% 20% 6.66% 20% 6.66% 20%;
+    grid-template-areas: "servicesOne" "dot1"  "servicesTwo"  "dot2"  "servicesThree"  "dot3"  "servicesFour"; }
+
+  .listBox {
+    width: 90%; }
+
+  .footer {
+    grid-template-columns: 65% 35%; }
+
+  #bulletList {
+    width: 90%; }
+
+  #f-Grid1 {
+    width: 90%; }
+
+  #f-Grid2 {
+    padding-top: 60px; }
+
+  #inputName, #inputPhone, #inputEmail {
+    display: block;
+    width: 100%;
+    float: none; } }
+@media (min-width: 768px) and (max-width: 1024px) {
+  #arrowGrid {
+    display: none; }
+
+  #showcase {
+    grid-template-areas: ". . ." "cont1 cont1 cont1" ". . ."; }
+
+  #aboutTitle p {
+    width: 90%; }
+
+  #gridHeader {
+    width: 90%;
+    grid-gap: 2em 12em; }
+
+  #formBox {
+    width: 100%; }
+
+  #formBackground {
+    background: none;
+    grid-template-areas: "form form form" "form form form" "form form form"; }
+
+  #gridCard {
+    width: 95%; }
+
+  p {
+    width: 70%; }
+
+  #servicesHeaderGrid {
+    width: 90%; }
+
+  .listBox {
+    width: 70%; }
+
+  .footer {
+    grid-template-columns: 65% 35%; }
+
+  #bulletList {
+    width: 90%; }
+
+  #f-Grid1 {
+    width: 90%; }
+
+  #f-Grid2 {
+    padding-top: 60px; } }
