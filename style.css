@@ -21,7 +21,6 @@ body {
 p {
   font-family: 'Roboto', sans-serif;
   margin: 50px auto;
-  width: 50%;
   font-size: 18px;
   text-align: center; }
 
@@ -35,12 +34,15 @@ h2 {
   color: white; }
 
 h2:first-child {
-  padding-top: 100px; }
+  padding-top: 80px; }
 
 * {
   transition-property: all;
   transition-duration: .6s;
   transition-timing-function: ease; }
+.fas {
+  font-size: 60px;
+}  
 
 /* Header Start */
 .navbar {
@@ -63,21 +65,22 @@ h2:first-child {
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
 
+
 /* Header End */
 /* Showcase Start */
 #showcase {
   width: 100%;
   height: 90vh;
   margin: 0;
-  background: url("https://i.imgur.com/sgLnw0o.jpg") no-repeat 0;
-  -webkit-background-size: cover;
+  -webkit-background-size: cover; 
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+	background-size: cover !important;
   display: grid;
   grid-template-columns: 25% 50% 25%;
   grid-template-rows: 20% 60% 20%;
   grid-template-areas: ". . ." ". cont1 ." ". arrowGrid ."; }
+
 
 .cont1 {
   grid-area: cont1;
@@ -140,7 +143,8 @@ h2:first-child {
   font-family: 'Roboto Condensed', sans-serif; }
 
 .textCont {
-  width: 100%; }
+  margin: 0 auto;
+  width: 50%; }
   .textCont h1 {
     font-weight: bold; }
   .textCont p {
@@ -148,13 +152,8 @@ h2:first-child {
     margin-top: 35px;
     line-height: 2em; }
 
-#aboutTitle p {
-  margin-bottom: 120px;
-  width: 60%; }
-
 .listBox {
-  width: 50%;
-  margin: 40px auto 120px auto; }
+  margin: 40px auto 120px 20px; }
 
 .lists {
   list-style-position: outside;
@@ -163,7 +162,7 @@ h2:first-child {
   .lists li {
     color: #56CCF2;
     text-align: left;
-    margin: 0;
+    margin: 10px auto;
     font-family: 'Roboto', sans-serif;
     font-size: 24px; }
 
@@ -294,11 +293,8 @@ h2:first-child {
 
 #formBackground {
   height: 900px;
-  background: url("https://i.imgur.com/sgLnw0o.jpg") no-repeat 0;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-size: cover !important;
+  background-position: center !important;
   display: grid;
   grid-template-columns: 10% 80% 10%;
   grid-template-rows: 10% 80% 10%;
@@ -420,12 +416,135 @@ h2:first-child {
   #f-Grid2 .fab {
     margin: auto 15px; }
 
-@media (min-width: 320px) and (max-width: 768px) {
+
+/* GALLERY STYLING */
+#galleryCont{
+  height: 700px;
+}
+
+.slider {
+  margin: 70px auto auto auto;
+  max-width: 760px;
+}
+
+.slide_viewer {
+  height: 380px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide_group {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.slide {
+  display: none;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.slide:first-child {
+  display: block;
+}
+
+.slide:nth-of-type(1) {
+  background: #D7A151;
+}
+
+.slide:nth-of-type(2) {
+  background: #F4E4CD;
+}
+
+.slide:nth-of-type(3) {
+  background: #C75534;
+}
+
+.slide:nth-of-type(4) {
+  background: #D1D1D4;
+}
+
+.slide_buttons {
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+a.slide_btn {
+  color: #474544 !important;
+  font-size: 42px;
+  margin: 0 0.175em;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.slide_btn.active, .slide_btn:hover {
+  color: #428CC6 !important;
+  cursor: pointer;
+}
+
+.directional_nav {
+  height: 340px;
+  margin: 0 auto;
+  max-width: 940px;
+  position: relative;
+  top: -340px;
+}
+
+.previous_btn {
+  bottom: 0;
+  left: 100px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+}
+
+.next_btn {
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  right: 100px;
+  top: 0;
+}
+
+.previous_btn, .next_btn {
+  cursor: pointer;
+  height: 65px;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -ms-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+  width: 65px;
+}
+
+.previous_btn:hover, .next_btn:hover {
+  opacity: 1;
+}
+
+.image{
+  width: 100%;
+  height: 100%;
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
   #arrowGrid {
     display: none; }
 
   #showcase {
     grid-template-areas: ". . ." "cont1 cont1 cont1" ". . ."; }
+  
+  #showcase img{
+    width: auto;
+  }
 
   .cont1 h3 {
     font-size: 50px; }
@@ -451,7 +570,7 @@ h2:first-child {
   #gridCard {
     width: 95%; }
 
-  p {
+  .textCont {
     width: 90%; }
 
   #servicesHeaderGrid {
@@ -479,7 +598,22 @@ h2:first-child {
   #inputName, #inputPhone, #inputEmail {
     display: block;
     width: 100%;
-    float: none; } }
+    float: none; } 
+  .downloadBox{
+    float: none;
+    width: auto;
+  } 
+  #HSList{
+    width: auto;
+    display: block;
+  } 
+  .previous_btn {
+    left: 50px;
+  }
+  .next_btn {
+    right: 50px;
+  }
+}
 @media (min-width: 768px) and (max-width: 1024px) {
   #arrowGrid {
     display: none; }
@@ -504,14 +638,14 @@ h2:first-child {
   #gridCard {
     width: 95%; }
 
-  p {
+  .textCont {
     width: 70%; }
 
   #servicesHeaderGrid {
     width: 90%; }
 
   .listBox {
-    width: 70%; }
+    width: 90%; }
 
   .footer {
     grid-template-columns: 65% 35%; }

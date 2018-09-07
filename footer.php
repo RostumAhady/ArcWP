@@ -13,7 +13,7 @@
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>AOS.init();</script>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/instafeed.min.js"></script>
+<!-- <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/instafeed.min.js"></script> -->
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/bootstrap.min.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/script.js"></script>
 </body>
